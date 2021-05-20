@@ -21,3 +21,4 @@ trigger_out=[1]*30
 dlp.defsequence(images,exposure,trigger_in,dark_time,trigger_out,0)
 
 dlp.startsequence()
+
