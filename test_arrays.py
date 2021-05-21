@@ -5,16 +5,17 @@ import matplotlib.pyplot as plt
 
 # make arrays for images
 def make_arrays():
-    x = np.arange(-5, 5, 1)
-    y = np.arange(-5, 5, 1)
-    #z = np.arange(-1, 1, 1)
-    z = 0.1
-    xx, yy, zz = np.meshgrid(x, y, z, sparse=True)
+    x = np.arange(-5, 5, .01)
+    y = np.arange(-5, 5, .01)
+    #z = np.arange(-5, 5, .
+    z = 0.3
+    xx, yy = np.meshgrid(x, y, sparse=True)
     #f = np.sin(xx**2 + yy**2) / (xx**2 + yy**2)
-    g = .01
-    import pdb; pdb.set_trace()
-    f = np.sin(g*xx)*np.cos(g*yy)+np.sin(g*yy)*np.cos(g*zz)+np.cos(g*xx)*np.sin(g*zz)
-    h = plt.contourf(x,y,f)
+    g = 1
+    # f = np.sin(g*xx)*np.cos(g*yy)+np.sin(g*yy)*np.cos(g*zz)+np.cos(g*xx)*np.sin(g*zz)
+    f = (np.sin(g * xx) * np.cos(g * yy)) + (np.sin(g * yy) * np.cos(g * z) )+ (np.cos(g * xx) * np.sin(g * z))
+
+    h = plt.contourf(x, y, f)
     plt.show()
 
 
